@@ -18,5 +18,8 @@ const router = app => {
     app.get('/users', (request, response) => {
         response.send(users);
     });
+    app.get('/blobs', (request, response) => {
+        response.send(users);
+    });
 }
 module.exports = router;
