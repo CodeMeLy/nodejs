@@ -1,19 +1,13 @@
-const users = [{
-    id: 1,
-    name: "Richard Hendricks",
-    email: "richard@piedpiper.com",
-},
-{
-    id: 2,
-    name: "Bertram Gilfoyle",
-    email: "gilfoyle@piedpiper.com",
-},
-];
+const users = {
+    "Minh":{
+        id: 1,
+        name: "Java",
+        lastName: "Script",
+    }
+}
 const router = app => {
     app.get('/', (request, response) => {
-        response.send({
-            message: 'Node.js and Express REST API'
-        });
+        response.send(users);
     });
     app.get('/users', (request, response) => {
         response.send(users);
@@ -21,5 +15,8 @@ const router = app => {
     app.get('/blobs', (request, response) => {
         response.send(users);
     });
+    app.post('/blobs', (request, response) => {
+        response.send(users);
+    })
 }
 module.exports = router;
